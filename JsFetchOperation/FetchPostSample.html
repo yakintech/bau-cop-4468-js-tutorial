@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <label for="">Category Name:</label>
+        <input type="text" name="" id="categoryName">
+    </div>
+    <div>
+        <label for="">Description:</label>
+        <input type="text" name="" id="description">
+    </div>
+    <div>
+        <button onclick="addCategory()">Add</button>
+    </div>
+
+
+</body>
+<script>
+
+    function addCategory() {
+
+        // var newCategory2 = new Object();
+
+        var newCategory = {};
+        newCategory.name = document.getElementById('categoryName').value;
+        newCategory.description = document.getElementById('description').value;
+
+
+        let requestOptions = {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newCategory)
+        }
+
+
+        fetch("https://northwind.vercel.app/api/categories", requestOptions)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log("new category from web service!", data);
+        })
+
+
+    }
+</script>
+
+</html>

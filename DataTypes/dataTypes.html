@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    var name = 'Çağatay';
+    var year = 2022;
+    var onlineStatus = false;
+
+    var user = null;
+    var city = undefined;
+
+    var points = [3,6,-1,10.2]
+
+    var webUser = {
+        name: 'Çağatay',
+        surname: 'Yıldız',
+        address: {
+            street: 'Valideçeşme',
+            city: 'İstanbul'
+        }
+    }
+
+
+    var webUsers = [
+        {
+            name: 'Çağatay',
+            surname: 'Yıldız',
+            address: {
+                street: 'Valideçeşme',
+                city: 'İstanbul'
+            }
+        },
+        {
+            name : 'Caner',
+            surname: 'Yılmaz'
+        }
+    ]
+
+    // console.log(webUser.address.street);
+
+
+    webUsers.forEach((item,key) => {
+
+        // if(item.address != undefined){
+        //     console.log(item.address.street)
+        // }
+        // else{
+        //     console.log('default address.');
+        // }
+
+        // console.log(item.address?.street);
+
+    })
+
+
+    webUsers.map((item, key) => {
+        console.log(item.address?.street);
+    })
+
+
+
+
+
+</script>
+
+</html>

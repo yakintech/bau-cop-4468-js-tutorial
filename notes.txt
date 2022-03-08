@@ -1,0 +1,15 @@
+Questions
+
+Cannot read properties of undefined (reading 'street')
+Promise keyword
+
+
+
+
+Link
+https://www.w3schools.com/js/js_conventions.asp
+https://www.w3schools.com/js/js_arrow_function.asp
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+
